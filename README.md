@@ -1,4 +1,5 @@
 # workday-scheduler
+![Screen Shot 2022-11-14 at 11 48 00 PM](https://user-images.githubusercontent.com/114897110/201829029-33a90d74-a901-4523-9026-2a809d0168db.png)
 
 ## Project Description
 The Workday Scheduler is a great tool for any employee with busy schedule. Within this user friendly application, the user will be able to add their important events to a daily planner to better manage their time effectively. 
