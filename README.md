@@ -22,7 +22,7 @@ THEN the saved events persist
 ```
 ## Important Links
 [GitHub Repository](https://github.com/maiaferrer/workday-scheduler)
-[Deployed Application](https://maiaferrer.github.io/workday-scheduler/
+[Deployed Application](https://maiaferrer.github.io/workday-scheduler/)
 
 ## Languages used
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
