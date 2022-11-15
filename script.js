@@ -3,16 +3,16 @@
 // in the html. --- loads the page only and if jquery is able to be ran -- done
 
 $(document).ready(function () {
-  // current day function
+  // current day function that uses dayjs for formatting
   $("#currentDay").text(dayjs().format('dddd, MMMM D, YYYY'));
 
-console.log(dayjs().format('H'));
-
+// Calls on the .time-block class and performs the function to apply past, present and future style classes
 $(".time-block").each(function(){
-  var currentHour = parseInt(dayjs().format('H'));
+// changes the format from a string in the html to an integer and day js for fromating the hour
+  var currentHour = parseInt(dayjs().format('H')); 
+// splits the hours into an array, nd again changes to integers
   var blockHour = parseInt($(this).attr("id").split("-")[1]);
-  console.log(blockHour);
-
+// if statement for box styling
   if(blockHour < currentHour)
   {
     $(this).addClass("past");
@@ -30,10 +30,13 @@ $(".time-block").each(function(){
 })
 
 
-  // saves responses to local storage 
+
+  // trying to saves responses to local storage:
   $("button").click(function () {
-    localStorage.getItem("");
+    var userInput = $('#input').text();
+    localStorage.getItem("todo",userInput)
   });
+  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -41,15 +44,10 @@ $(".time-block").each(function(){
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page. -- done
+  
 });
